@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.hello{
+    text-align: center;
+    background-color: aqua;
+}
+.kutu1{
+    background-color: chartreuse;
+}
+.kutu2{
+   background-color: rgb(174, 73, 142);
+   height: 300px;
+   width: 50px;
+   text-align: center;
+   margin-right: auto;
+   margin-left: auto;
+
+}
+/*kutu 2 ye verilen yukseklik degeri kutu1 i de etkiledi */
+/*margin-right: 0;
+  margin-left: auto;  bu sekilde tam sola hizalama yapiliyor. 
+  
+  margin-right: 0;
+  margin-left: auto; boyle olunce ortalama yapiliyor*/
+    </style>
+</head>
+<body>
+<!--Blok eleman icinde inline elamanin hizalanmasi
+dıv blok eleman tum satırı kaplıyor. icindeki span ise
+inline elaman kendi kadar yer kapliyor-->
+<div class="hello">
+    <span style="background-color: bisque;" >Merhaba</span> 
+</div>
+<br>
+
+<!--Blok eleman icinde yine blok bir elamanin hizalanmasi-->
+
+<div class="kutu1" >
+    <div class="kutu2" >#</div>
+</div>
+    
+</body>
+</html>

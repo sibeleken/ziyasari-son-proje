@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- 100 luk not sistemini harf sistemine 
+    donusturen fonksiyonu yaziniz -->
+
+<input 
+type="text" 
+id="txtSayi" 
+placeholder="Not giriniz" 
+oninput="clickHesapla()">
+
+<input 
+type="button" 
+id="btnHesapla"
+value="Harf Degerini Goster"
+onclick="clickHesapla()">
+
+<h1 id="sonuc"></h1>
+
+</body>
+
+<script>
+
+function clickHesapla() {
+    const sayi = document.querySelector('#txtSayi').value;
+    const sonuc = harfSis(sayi);
+    if (!sonuc) {
+      alert("lutfen 0-100 arasinda bir sayi giriniz.");  
+    }
+    document.querySelector("#sonuc").innerText = "Harf Degeri: "+sonuc;
+}
+
+function harfSis(sayi) {
+
+    if (!sayi || isNaN(sayi) ||sayi<0 || sayi>100) return false; 
+        if (sayi>=90) {
+            let a = "A";
+            return a;
+        } else if(sayi<90 && sayi>=80) {
+            let a = "B";
+            return a;
+        } else if(sayi<80 && sayi>=70) {
+            let a = "C";
+            return a;
+        }else if(sayi<70 && sayi>=60) {
+            let a = "D";
+            return  a;
+        }else if(sayi<60 && sayi>=50) {
+            let a = "E";
+            return a;
+        }else{
+            let a = "F";
+            return a;
+        }
+
+    
+}
+
+</script>
+
+</html>

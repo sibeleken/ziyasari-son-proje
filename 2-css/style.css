@@ -1,0 +1,17 @@
+p{
+    color: red;
+    text-align: center;
+    font-family: tahoma;
+    
+}
+h1{
+    font-size: 30px;
+    color: blue;
+    text-align: center;
+}
+
+
+/* Bu sekilde (style.css) (css uzantili) klasoru olusturup, burada  sitil tanimlamasi yapip
+html uzantili dosya veya dosyalari buna baglayarak external bir 
+sistem olusturduk */
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="txtAd" value="">    
+    
+    <input type="button" id="btnGonder" value="Gonder" onclick="addItem()">
+     
+    <!--  (<input type="text" id="txtAd" value="">) buraya yazilani 
+    ul listesine sirayla yazdirsin istiyoruz. Simdi onu yapacagiz  -->
+
+    <ul id="liste" >
+
+    </ul>
+    
+    <script>
+    
+        function addItem(){
+            const elAd = document.querySelector("#txtAd"); 
+            const elListe = document.querySelector("#liste");
+    
+            elListe.innerHTML += `<li>${elAd.value}</li>`;
+
+        }
+     //(elListe.innerHTML +=) oncekini unutmadan sirayla ekle demek
+
+    </script>
+
+</body>
+</html>

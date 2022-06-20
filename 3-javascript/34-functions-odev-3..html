@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- Kendisine gonderilen metin icerisinde ki 
+bosluklarin sayisini bulan fonksiyonu yazinis. (substring kullan) -->
+
+<input 
+type="text"
+id="metin"
+placeholder="Buraya bir metin giriniz"
+oninput="clickHesapla()">
+
+<input 
+type="button" 
+id="btrHesapla"
+value="Kac Bosluk Var?"
+onclick="clickHesapla()">
+
+<h3 id="sonuc"></h3>
+
+</body>
+
+<script>
+
+function clickHesapla() {
+   const metin = document.querySelector("#metin").value;
+   const sonuc = kacBosluk(metin);
+
+   document.querySelector("#sonuc").innerText = "Bosluk Sayisi: " + sonuc;
+}
+
+function kacBosluk(metin) {
+
+    if(metin.length == 0) return false ;
+
+    let count = 0; 
+    for( let i = 0 ; i< metin.length ; i++){
+
+        let a = metin.substring(i, i+1);
+        if (a == " "){
+            count++;
+        }
+    }
+  return count;
+}
+
+</script>
+
+</html>

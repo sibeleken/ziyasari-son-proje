@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="matris" ></div>
+
+    <script>
+        
+let star = "";
+const satir = 7;
+// Bu ornekte tek sayi olmak durumunda. 
+//Tam ortada en ustte bir yildiz olsun istiyorsak
+
+const ref= (satir+1)/2;
+
+for(i=1; i<=ref; i++){
+    for(k=1; k<ref+i; k++){ 
+
+        if(ref-i>=k){
+
+            star += `<Span style="color: white">*</span>`;
+
+        }else{
+
+            star += "*";
+        }
+    }   
+    
+    star += "<br>";
+}
+
+document.querySelector("#matris").innerHTML = star;
+
+//(star += `<Span style="color: white">*</span>`;)
+//normalde  (star += "&nbsp") yapacaktik ancak 
+//bosluk yildizdan daha az yer kapladigindan 
+//sekil duzgun olmadi. Onun yerine beyaz renkli yildiz
+//tanimladik.
+
+    </script>
+    
+</body>
+</html>

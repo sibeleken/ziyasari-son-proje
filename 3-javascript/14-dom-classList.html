@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .mavi{
+            color: rgb(67, 67, 218);            
+        } 
+
+        .bg-pembe{
+            background-color: pink;
+        }
+
+        .yaziTipi{
+            font-family: 'Lucida Sans';
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+    </style>
+
+</head>
+<body>
+ 
+<div id="yazi" class="mavi bg-pembe">
+
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+    Doloribus pariatur at facilis, tempore quis accusantium 
+    eius nihil aliquid culpa blanditiis velit, eveniet aperiam 
+    ab sunt dolore ducimus quo harum. Quisquam?
+
+</div>
+
+    <script>
+
+const elYazi = document.querySelector("#yazi");
+elYazi.classList.add("yaziTipi");
+console.log(elYazi.classList);
+
+//id si yazi olan elemanin Classin daki listeyi veriyor. Mavi ve bg-pembe
+//Ayrica (add) ile clas eklemek ve 
+//(remove) ile sahip oldugu class i kaldirmak mumkun
+
+//const elYazi = document.querySelector("#yazi");
+//elYazi.classList.add("yaziTipi"); direk javascript kodu ile 
+//dinamik bir sekilde class listesine yeni bir eleman ekledik.
+//console.log(elYazi.classList);
+    </script>
+    
+</body>
+</html>

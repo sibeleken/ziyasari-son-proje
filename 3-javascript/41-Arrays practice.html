@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- Bir dizi icindeki sayilarin genel ortalamasindan
+ kucuk olan kac adet sayi oldugunu bulan programi yapiniz-->
+
+<input type="button" value="Hesapla" onclick = "clickHesapla()">
+
+<!--  Butona basinca (clickHesapla) fonksiyonu aktif oluyor -->
+ <script>
+
+  
+
+// EVENT FONKSIYON
+
+function clickHesapla() {
+
+    const dizi = [12, 43, 65, 23, 56, 121, 45, 11, 45, 7, 87];
+
+    const average =  getAverage(dizi);  //dizi yi (getAverage) fonksiyonuna gonderdik.
+
+    const count =  getCount(dizi, average);  //dizi yi ve (average) degeri  (getCount) fonksiyone gonderdik.
+
+    alert(`Dizinin icinde ortalama deger olan ${average} dan kucuk olan ${count} adet eleman var.`)
+
+}
+// (getAverage) fonksiyonu ortalamayi return etti.  const average = ortalama oldu.   
+// Son olarak (getCount) fonksiyonu bize count u return ediyor. 
+
+
+    // JENERIC FONKSIYON
+    
+    function getCount(arr , ref) {
+    
+        let count = 0;
+    for (let i = 0; i<arr.length; i++) {
+        if(arr[i] < ref){
+
+            count++;  
+        }          
+    }
+
+        return count;
+
+    }
+    
+    // JENERIC FONKSIYON
+    
+    function getAverage(arr) {
+    
+        let avg = 0;
+    
+        for (let i = 0; i < arr.length; i++) {
+    
+            avg += arr[i];     
+        }
+        avg = (avg / arr.length).toFixed(2);
+        return avg;   
+    }
+    
+    //toFixed() virgulden sonra kac eleman olsun onu soyler. 
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="button" value="Say Hello" onclick="sayHello()"><br>
+
+    <input type="text" id="txtAd" placeholder="Adinizi giriniz">
+    <input type="button" value="Say Hello" onclick="sayHello2Click()">
+    <input type="button" value="Say Hello" onclick="sayHello3Click()">
+
+<script>
+
+function sayHello() {
+    alert("Hello");
+}
+
+
+// Event Function
+
+function sayHello2Click() {  //Bagimli event function/ bir classa bagli. Sadece ona bagli calisir.
+    const ad = document.querySelector('#txtAd').value;
+    sayHello2(ad);  // Bagimsiz olan fonksiyonu buraya bagladik
+}
+
+
+function sayHello3Click() {  
+    const ad = document.querySelector('#txtAd').value;
+    const sonuc = sayHello3(ad); 
+    alert(sonuc);
+} //Tam bagimsiz function da (en son da) olusturdugumuzu burada tanimladik.
+
+
+
+function sayHello2(isim) {   //Bu fonksiyon yari bagimsiz bir fonksiyon. Allert ile bagli 
+
+    alert(`Hello ${isim}`);
+}
+
+
+
+
+function sayHello3(isim) {   //Bu fonksiyon bagimsiz bir fonksiyon. 
+
+    const helloStr = `Hello ${isim}`
+    
+    return helloStr;
+}
+
+
+
+
+
+
+
+
+/* sayHello2("Ali");
+   sayHello2("Ayse");
+  sayHello2("Fatma");
+  denemk icin yaptik (Hello Ali) vs dedi*/
+
+</script>
+
+</body>
+</html>

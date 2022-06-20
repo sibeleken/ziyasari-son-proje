@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script>
+
+/* Vaeriables = degiskenler ; constants = sabitler
+degisken tanimlamak icin var veya let kullanilir
+sabit tanimlamak icin const kullanilir ve degistirilemezler
+casesensetive dir (buyuk kucuk harfe duyarlidir ) */
+
+let maas = 13;
+let ad = "Ali";
+let sayi = "50"; /* string gibi yazdik 
+toplamada bubu string olarak algilayacak
+ ama bolme carpma ve cikarmada sayi olarak algilar
+let sayi = 50; yazsaydik sayi olarak algilardi.*/
+
+console.log(maas>sayi);
+/*  Karsilastirma her zaman true veya false verir  */
+
+const kdv = 1.18;
+
+// const kdv = 2; sabitler degistirilemez bu yuzden hata verdi.  
+// hata verince sistem devam etmiyor. Hatani duzeltmek zorundasin.
+
+let emekli = true;
+
+console.log(typeof(maas));
+console.log(typeof(ad));
+console.log(typeof(emekli));
+
+maas = maas + 50;
+maas += 50; /* ustteki islem ile ayni seyi ifade ediyor */
+maas = maas*2; 
+console.log(maas);
+
+console.log(ad + maas);
+console.log(sayi + maas);
+//string ile numberi toplamadi
+//hata da vermedi,  yanyana yazdi
+//Toplamada veri tipine bakar ona gore hareket eder.
+
+console.log(maas - sayi);
+//string ile numbere cikatma islemini yapti
+// bolme ve carmada yapar
+
+      </script>
+
+</body>
+</html>

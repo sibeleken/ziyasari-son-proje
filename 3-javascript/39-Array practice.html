@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--  Bir dizi icindeki en buyuk sayiyi bulan fonksiyonu yaziniz. -->
+
+    <input type="button" value="Test1" onclick="test1()">
+    <input type="button" value="Test2" onclick="test2()">
+
+</body>
+
+<script>
+  
+ //EVENT FONCTIONS
+  function test1() {
+    const sayilar= [12, 56, 14, 67, 89, 33, 22, 10, 92, 50];
+    const sonuc = getMaxNumber(sayilar);
+    alert(sonuc);
+      
+  }
+
+  function test2() {
+    const notlar= [98, 56, 14, 67, 89, 33, 85, 10, 50];
+    const sonuc = getMaxNumber(notlar);
+    alert(sonuc);
+  }
+
+
+//BAGIMSIZ FONKSIYON
+    function getMaxNumber(dizi) {
+
+    let maxNumber = dizi[0];
+
+    for (let i = 1 ; i < dizi.length ; i++) {
+
+        if(maxNumber<dizi[i]){
+            maxNumber = dizi[i];
+        }        
+    }        
+    return maxNumber;
+}
+
+
+</script>
+
+</html>

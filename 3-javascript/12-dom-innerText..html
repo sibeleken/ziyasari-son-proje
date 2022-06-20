@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1 id="baslikSehirler" class="baslik">Sehirler</h1>
+    <ul id="liste">
+        <li>Ankara</li>
+        <li>Istanbul</li>
+        <li class="list-item" >Izmir</li>
+    </ul>
+
+  <div id="name" >Adi: <span>Ali Gel</span> </div>
+
+    <script>
+
+    const elName = document.querySelector("#name span");
+    // Spani ve icindeki elemani komple secti.
+    console.log(elName.innerText);
+     // Span in icindeki elemani secti.
+   alert(`Merhaba ${elName.innerText}`);
+
+    elName.innerText= "Veli Kos"; // Veriyi degistirdik 
+    
+    // inner.text'i iki sebeple kullaniriz.
+    // 1)html nin icindeki herhandi bir elementin icindeki yaziyi alip 
+    //okumak icin 
+    //2)html nin icindeki herhandi bir elementin icindeki yaziyi
+    //degistirmek ( baska degeri atadik) icin 
+
+    </script>
+    
+</body>
+</html>

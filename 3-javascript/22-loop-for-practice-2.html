@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- SORU: 100 ile 200 arasindaki cift sayilarin toplamini bulan 
+programi yaziniz -->
+
+     <input type="number" id="txtSayi1" min="0"><br>
+     <input type="number" id="txtSayi2" min="0">
+
+     <input type="button" value="Hesapla" onclick="hesapla()" >
+<!-- Butona basinca hesapla fonksiyonu cagriliyor -->
+
+    <h3 id="sonuc" ></h3>
+    
+<script>
+  
+function hesapla() {
+
+    let sayi1 = Number(document.querySelector("#txtSayi1").value);
+    let sayi2 = Number(document.querySelector("#txtSayi2").value);
+
+    let toplam = 0;
+
+    if(sayi1%2!=0){ 
+        sayi1++;
+    }
+    // Eger girilen birinci sayinin 2 ye bolumunden kalan 0 degilse 
+    // girilen sayiyi 1 arttir.
+
+    for (let i = sayi1 ; i <= sayi2 ; i+=2){ // 2 ser 2 ser artacak
+
+        toplam = toplam + i;
+    }    
+
+    document.querySelector("#sonuc").innerText = toplam;
+}
+
+</script>
+
+</body>
+
+<script></script>
+
+</html>

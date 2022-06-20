@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+.msg{
+    background-color: rgb(199, 172, 226);
+    display: inline-block;
+    padding: 20px;
+
+    /* (div normalde blok eleman) display: inline-block; 
+    bu sekilde melez ozellik veriyoruz. 
+    Inline gorunuyor ama blok elemana ozgu kullanimlar 
+    (mesela: padding gibi) uygulanabiliyor*/   
+}
+
+.msg1{
+    background-color: rgb(199, 172, 226);
+    border: 5px dotted red;
+}
+
+.msg2{
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+}
+
+.msg3{
+    border-radius: 40px;
+}
+.msg4{
+    background-color: red;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+
+}
+
+</style>
+
+</head>
+<body>
+
+    <div class="msg msg1" >Hello World</div>
+
+    <div class="msg msg2" >Hello World</div>
+    <!--iki class ismi verilebilir ikisine verilen  komutlardan etkilenir -->
+    
+    <div class="msg msg3" >Hello World</div>
+
+    <div class="msg msg4" >Hello World</div>
+    
+    
+</body>
+</html>

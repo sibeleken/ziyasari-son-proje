@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        const sayilar = [23, 123, 5, 42, 665, 34, 87, 23, 1];
+
+        console.log(sayilar);
+
+        sayilar.push(33); //push dizinin sonuna yeni bir eleman eklemek icin kullanilir.
+        console.log(sayilar);
+
+        sayilar.pop();
+        console.log(sayilar); // pop dizinin son elemenini silmek icin kullanilir.
+        
+
+
+        sonuc = sayilar.push(33); 
+        console.log(sonuc);
+
+
+        sonuc = sayilar.pop();        
+        console.log(sonuc);
+
+        // (splice) belirtilen index elemandan sonrasini siler
+        sayilar.splice(6); 
+        console.log(sayilar);
+
+        // (splice) belirtilen index elemandan itibaren belirtilen sayi kadar eleman siler
+        sayilar.splice(3,2); 
+        console.log(sayilar);
+
+        // (splice) belirtilen index elemandan itibaren belirtilen sayi kadar eleman siler
+        // sildigi yere istedigin kadar belirtilen elemanlari koyar
+        sayilar.splice(1, 1, 55, 77); 
+        console.log(sayilar);
+
+        // (splice) belirtilen index ten itibaren silmeden ekleme yapar.
+        sayilar.splice(4, 0, 99); 
+        console.log(sayilar);
+
+
+        sayilar.sort(); // sort default olarak string siralama yapar
+        console.log(sayilar);
+
+
+        // kucukten buyuge numeric siralama
+        sayilar.sort(function (a,b){
+            return a-b; // negatif , pozitif , sifir olabilir.
+        })
+        console.log(sayilar);
+
+        // Buyukten kucuge numeric siralama
+        sayilar.sort(function (a,b){
+            return b-a; 
+        })
+        console.log(sayilar);
+
+
+        // dizi siralasini tersine cevirir
+        sayilar.reverse();
+        console.log(sayilar);
+
+        // dizide belirtilen eleman var mi ona bakar. Varsa true yolsa false doner.
+         sonuc  = sayilar.includes(55 , 2); // from index = indexi 2 olan elemandan sonra 55 var mi ona bakiyor.
+         console.log(sonuc);
+
+         sonuc  = sayilar.includes(595);
+         console.log(sonuc);
+
+    </script>
+
+</body>
+</html>

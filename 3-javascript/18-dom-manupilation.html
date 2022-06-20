@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+     
+     .darkMode{
+         background-color: black;
+         color: white;
+     }
+
+</style>
+
+<body>      
+    
+    <input type="button" id="btnMod" value="Dark Mode" onclick="modDegis()">
+
+<!-- mod buton una basinca arka plan siyah yazilar beyaz olsun 
+bunu yapmak istiyoruz. Buton a bastigimizda 
+<body class="darkMode">  boyle olmali. Birdaha bastigimizda 
+<body> boyle olmali -->
+     
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+Earum possimus pariatur dolores modi assumenda tenetur libero 
+sunt laborum eaque mollitia et, maiores, cum animi architecto. 
+Quam numquam et rerum amet!
+Vero, quaerat maiores deserunt praesentium adipisci eligendi 
+culpa totam expedita necessitatibus vel earum neque sed rerum 
+qui delectus quidem cum numquam dolore. Modi sint consequatur nam, 
+fuga assumenda voluptatem perferendis.
+Recusandae sint inventore non fuga. Nostrum exercitationem beatae 
+sit consequuntur accusamus error perferendis alias fuga autem voluptatibu
+s ipsum perspiciatis ad, nisi recusandae pariatur quis? Veritatis totam
+maiores sed architecto facilis.
+Dolor dolorum recusandae animi sint architecto eaque ipsum error
+ perspiciatis consequuntur dolores ratione expedita, officiis modi
+minus optio. Dolorem odit rem, enim est fugit quia eius autem
+officiis nulla illum.
+Incidunt tempore distinctio amet omnis officiis
+magni exercitationem perferendis, quae a dicta ut consequatur beatae, 
+laboriosam laudantium molestiae iure? Consequuntur autem blanditiis
+illum est atque velit, eligendi a facilis culpa.</p>
+    
+    <script>
+
+    let mod = "light"; // Fonksiyonu tanimlamadan once bir degisken olarak
+    //mod u light olarak belirledik. Ancak butona bastikca mod degiskeni 
+    //degismeli ki istedigimiz degisiklik olsun.
+
+        function modDegis(){
+            if (mod == "light") {
+
+                document.querySelector("body").classList.add("darkMode");
+//body html yi all butona bastigimda (darkMode) class i ekle dedik
+                document.querySelector("#btnMod").value = "Light Mode";
+                mod = "dark"; // Mod u dark yapmazsa mod hep light kalir ve
+// sayfa hep darkMode olarak kalir. Asagida da mod u light yaptik ki
+// bir dark bir light olsun
+
+            }else{
+                document.querySelector("body").classList.remove("darkMode");
+                document.querySelector("#btnMod").value = "Dark Mode";
+                mod = "light";
+            }
+        }
+ // Kullanici hareketleri ile HTML ve SCC imizi komple degistirebiliyoruz.
+ // DOM Manipulasyon denilen sey bu.    
+    </script>
+
+</body>
+</html>

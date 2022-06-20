@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1 id="baslikSehirler" class="baslik">Sehirler</h1>
+    <ul id="liste">
+        <li>Ankara</li>
+        <li>Istanbul</li>
+        <li class="list-item" >Izmir</li>
+    </ul>
+
+    <h1 id="baslikUlkeler" class="baslik">Ulkeler</h1>
+
+    <script>
+
+    const el = document.querySelector("h1");
+    const el1 = document.querySelector("#baslikUlkeler");
+    console.log(el);
+    console.log(el1);
+    const el2 = document.querySelector("#liste");
+    console.log(el2);
+    const el3 = document.querySelector("#liste li"); // ID si liste olan elamanin ilk elemanini secer
+    console.log(el3);
+    const el4 = document.querySelector(".list-item"); // class ismi oldugundan . kullanildi
+    console.log(el4);
+    const el5 = document.querySelectorAll("#liste li"); // ID si liste olan elamanin tum li leri secti
+    console.log(el5);
+    const el6 = document.querySelector("#liste li:nth-child(2)"); // ID si liste olan elamanin icindeki li lerden 
+    //2. sini secer. Javascriptte index 0 dan baslar. CSS de 1 den baslar. Burada bir CSS secicisi kullanidi.
+    //CSS ozelligidir bu yontem ("#liste li:first-child") desydik birinci eleman olurdu.
+    console.log(el6);
+
+
+//Bir web sayfasinda ki diger tum nesnelerin sahibi olan ana nesneye 
+//"Document object" denirDocument nesnesi web sayfamizi temsil eder.
+//Eger sayfa icindeki bir nesneye erisilmek istenirse "document" nesnesi kullanilir.
+
+// document.querySelector('h1'); bu sadece bir eleman secer. Gordugu ilk h1 i secer 
+// Javascriptte istedigimiz elemani net bir sekilde cekebilmek 
+//istiyorsak ona ya class yada ID vermemiz lazim
+//Ayni class ismi birden fazla elemana verilebilir (ISIM gibi) ancak 
+//ID sadece tek elemana verilebilir (TC NO gibi).
+// . clasi temsil eder # ID yi temsil eder.
+
+    </script>
+    
+</body>
+</html>

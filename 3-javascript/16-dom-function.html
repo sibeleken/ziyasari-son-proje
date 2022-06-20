@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input type="text" id="txtAd"  oninput="sayHello()" value="">
+
+<!-- Buraya sayHello() fonksiyonunun harekete gecme tanimlamasini 
+butona basildiginda sayHello() fonksiyonunun harekete gecme 
+tanimlamasindan sonra denemek icin yaptik.
+oninput="sayHello()"  silersen butona bastiginda fonksiyon harekete gecer -->
+
+<input type="button" id="btnGonder" value="Gonder" onclick="sayHello()">
+
+<!-- Kullanici gonder butonuna bastiginda 
+(sayHello)  isimli fonksiyonu calistir. Fonksiyonu asagida tanimladik-->
+
+<h4 id="baslik"></h4>
+
+<script>
+
+    function sayHello() {
+        const elAd = document.querySelector("#txtAd"); 
+        const elBaslik = document.querySelector("#baslik");
+
+        elBaslik.innerText = elAd.value;
+    }
+
+// el baslik html oldugundan (innertext) kullandik
+// elAd form elemani oldugundan (value) kullandik
+
+</script>
+
+</body>
+</html>

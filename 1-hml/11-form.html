@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- <form action=""></form> form ile ilgili herseyi bu tagin arasina koyuyuruz.
+
+<input type="text"> kullanicidan bilgi almak icin kullanilan form elemani. 
+Kullanici oraya mesela epostasini yazar.
+
+input: text yazarsan (<input type="text" name="" id="">) bu gelir
+buradaki id ifadesi javascripte icin tanimlayici bir kullanim 
+(name) kullanicinin yazdigi name sayesinde paketlenip sunuculara gonderilir.
+
+<label for=""></label> Kullaniciya form elemani ile ilgili bilgi vermek icin 
+kullanilan eleman. Inputa ne yazacagimizin bilgisini verir. -->
+
+
+<body>
+    <form action="">
+<label for="eposta">Eposta</label>
+
+<!-- inputa id belirledik. Bu id yi label for un icine yazince
+e posta nin uzerine basinca kullaniciya direk kutucugu adres gosterir. -->
+
+<input id="eposta" type="email" placeholder="info@example.com" ><br>
+<!-- type eposta girdigin icin sadece e posta girebilirsin -->
+
+<input type="number" name="" id=""><br> 
+<!-- type number yazdigin icin Sadece rakam girebilirsin -->
+
+<input type="text" name="" id="" required><br>
+<!-- required yazarak veri girimini zorunlu hale getirdik.--> 
+
+<input type="password" name="" id=""><br>
+<!-- type="password" yazdigin icin gizliyor. -->
+
+<input type="submit" value="Gonder">
+<!-- submit yerine button da yazabiliriz.
+submit verinin duzgun girilip girilmedigini kontrol ederdi. -->
+
+<input type="reset" value="Temizle"><br><br>
+<!-- reset yazilanlari temizler -->
+
+
+
+<input type="checkbox" name="" id="fb"> <label for="fb">Facebook</label>  
+<input type="checkbox" name="" id="">Twitter
+<input type="checkbox" name="" id="">Youtube
+<br> <br>
+<!--input:checkbox yazinca bu formatta cikar
+id="fb"> <label for="fb">Facebook</label>  yaparak 
+Facebook a tiklayinca kutucugu isaretliyor.-->
+
+
+<input type="radio" name="cinsiyet" id="erkek"> <label for="erkek">Erkek</label>
+<input type="radio" name="cinsiyet" id="kadin"> <label for="kadin">Kadin</label>
+<br>
+ <!--input:radio yazinca bu formatta cikar
+id="erkek"> <label for="erkek">Erkek</label>  yaparak 
+erkek e tiklayinca kutucugu isaretliyor.
+Radio formatta name leri ayni yapinca sadece bir tanesini 
+secmene musade ediyor. Iki cinsiyeti ayni anda isaretleyemiyorsun-->
+
+<input type="radio" name="meslek" id="m1"> <label for="m1">Ogretrmen</label>
+<input type="radio" name="meslek" id="m2"> <label for="m2">Muhendis</label>
+<input type="radio" name="meslek" id="m3"> <label for="m3">Doktor</label>
+<br><br>
+
+
+<input type="file" name="" id=""> <!-- input: file yazinca cikar -->
+<br><br>
+
+<input type="date" name="" id=""> <!-- input:date yazinca cikiyor -->
+<br><br>
+
+<select name="" id="">
+<option value="">Ankara</option>
+<option value="">Izmir</option>
+<option value="">Istanbul</option>
+<option value="">Eskisehir</option>
+</select>
+<br><br>
+<!-- select acilir liste yapiyoruz
+selectlerin arasina option lari koyuyoruz  -->
+
+<textarea name="" id="" cols="30" rows="10"></textarea>
+<br>
+<!-- textarea  uzun yazi yazmaya olanak saglayan bir yontem.
+row ve cols lar ile boyutu ayarlanabilir.-->
+
+<input type="submit" value="Kaydet">
+<input type="reset" value="Temizle">
+
+    </form>
+
+</body>
+</html>
